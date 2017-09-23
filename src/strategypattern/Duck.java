@@ -1,21 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package strategypattern;
+
+import strategypattern.interfaces.FlyBehaviour;
+import strategypattern.interfaces.QuackBehaviour;
 
 /**
  *
  * @author rajajawahar
  */
-public class Duck {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+abstract public class Duck {
+    
+    abstract void display();
+    
+    FlyBehaviour flyBehaviour ;
+    QuackBehaviour quackBehaviour;   
+    
+    
+    Duck(){
+    
     }
     
+    public void performQuack(){
+        if(quackBehaviour!=null)
+        quackBehaviour.quack();
+    }
+    
+    public void performFly(){
+        flyBehaviour.Fly();
+    }
+
+    
+    
+ 
 }

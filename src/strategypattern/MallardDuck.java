@@ -5,10 +5,26 @@
  */
 package strategypattern;
 
-/**
- *
- * @author rajajawahar
- */
-public class MallardDuck {
+
+import strategypattern.classes.FlyWithWings;
+
+
+
+public class MallardDuck extends Duck {
+
+    public MallardDuck() {
+       flyBehaviour = new FlyWithWings();
+    }
+    
+    
+
+    @Override
+    void display() {
+        
+    }
+
+  
+
+    
     
 }
